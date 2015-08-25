@@ -1,0 +1,119 @@
+<?php
+// Set Title
+$this->headTitle("Grid");
+
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/dojo/1.6/dojox/grid/enhanced/resources/claroEnhancedGrid.css"));
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/dojo/1.6/dojox/grid/enhanced/resources/EnhancedGrid_rtl.css"));
+?>
+
+
+
+<?php 
+$data = array('identifier' => 'id', 'items' => $this->data);
+$script  = "var memoryData = " . Zend_Json::encode($this->data) . ";";
+$this->headScript()->appendScript($script);
+?>
+
+<div data="memoryData" id="memoryStore" jsId="memoryStore" dojoType="dojo.store.Memory"></div> 
+<div objectStore="memoryStore" id="store" jsId="store" dojoType="dojo.data.ObjectStore"></div> 
+
+<div id="mygrid"    
+    style="width: auto; height: auto;" 
+    dojoType="dojox.grid.EnhancedGrid" 
+    store="store"
+    
+    structure="
+    	[{
+            field: 'id',
+            name: 'Id',
+            width: '50px'
+        },
+        {
+            field: 'departamentName',
+            name: 'Departament',
+            width: '150px'
+        },
+        {
+            field: 'name',
+            name: 'Name',
+            width: 'auto'
+        }]"
+    plugins="
+        {
+            nestedSorting: true
+        },
+        {
+            menus: {
+                    headerMenu: 'headerMenu',
+                    rowMenu: 'rowMenu',
+                    cellMenu: 'cellMenu',
+                    selectedRegionMenu: 'selectedRegionMenu'
+                    }
+        },
+        {
+            pagination: {
+                    position: 'bottom'
+                    }
+        }  
+        "
+    >
+    
+    <div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
+        <div dojoType="dijit.MenuItem">
+            Header Menu Item 1
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Header Menu Item 2
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Header Menu Item 3
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Header Menu Item 4
+        </div>
+    </div>
+    <div dojoType="dijit.Menu" id="rowMenu" style="display: none;">
+        <div dojoType="dijit.MenuItem">
+            Row Menu Item 1
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Row Menu Item 2
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Row Menu Item 3
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Row Menu Item 4
+        </div>
+    </div>
+    <div dojoType="dijit.Menu" id="cellMenu" style="display: none;">
+        <div dojoType="dijit.MenuItem">
+            Cell Menu Item 1
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Cell Menu Item 2
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Cell Menu Item 3
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Cell Menu Item 4
+        </div>
+    </div>
+    <div dojoType="dijit.Menu" id="selectedRegionMenu" style="display: none;">
+        <div dojoType="dijit.MenuItem">
+            Action 1 for Selected Region
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Action 2 for Selected Region
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Action 3 for Selected Region
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Action 4 for Selected Region
+        </div>
+    </div>
+    
+</div>
+

@@ -1,0 +1,16 @@
+default:
+
+#    plugins:
+#        - User_Plugin_Auth
+                    
+production:
+    _extends: default
+
+staging:
+    _extends: default
+
+testing:
+    _extends: default
+
+development:
+    _extends: default

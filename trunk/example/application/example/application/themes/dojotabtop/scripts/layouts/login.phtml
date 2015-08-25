@@ -1,0 +1,31 @@
+<?php
+// Set Title
+$this->headTitle("Login")->setSeparator(' - ');
+
+// JS
+$this->headScript()->appendFile($this->baseUrl("themes/dojotabtop/commons/all.js"));
+
+// CSS
+$this->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=Open+Sans');
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/extras/dojo/1.6/dojox/layout/resources/ExpandoPane.css"));
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/extras/dojo/1.6/dojox/widget/Dialog/Dialog.css"));
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojotabtop/commons/all.css"));
+
+// Dojo
+$this->dojo()->prependOnLoad('bootstrap');
+
+?>
+
+<body class="claro">
+
+    <!-- Start Preloader -->
+    <div id="preloader"></div>
+    <!-- End Preloader -->
+
+    <!-- Start Content -->
+    <div dojoType="dojox.layout.ContentPane" region="center" id="tabModule<?=$this->request()->getModuleName()?><?=$this->request()->getControllerName()?><?=$this->request()->getActionName()?>content" style="overflow-y: auto"><?= $this->layout()->content ?></div>
+    <!-- End Content -->
+
+</body>
+
+

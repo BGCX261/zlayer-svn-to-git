@@ -1,0 +1,18 @@
+default:
+    resources:
+        view:
+            doctype: XHTML1_STRICT
+            charset: UTF-8
+            contentType: text/html; charset=UTF-8
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

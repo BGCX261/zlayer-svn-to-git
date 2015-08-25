@@ -1,0 +1,100 @@
+/* Zend Form Styling */
+form {
+    width: 100%;
+    height: auto !important;
+}
+
+dl.zend_form > dt {
+    display: none;
+    visibility: hidden;
+}
+
+dl.zend_form > dd {
+    width: 90%;
+    margin: .7em auto 1.5em auto;
+    background: #fff;
+    border: 1px solid #84acd3;
+}
+
+dl.zend_form fieldset {
+    width: 100%;
+}
+
+dl.zend_form legend {
+    width: 97%;
+    margin: 0 0 2em 0;
+    padding: 5px 12px;
+    background:  url(images/bgLegend.png) left top repeat-x #b6d0ea;
+    border-bottom: 1px solid #84acd3;
+    min-height: 20px;
+    font-size: 1.275em;
+    color: #022344;
+}
+
+dl.zend_form fieldset > dl {
+    padding-top: 1em;
+}
+
+dl.zend_form fieldset dl > dt {
+	width: 100px;
+	margin-left: 30px;
+}
+
+dl.zend_form fieldset dd {
+    float: left;
+    clear: right;
+    padding-left: 15px;
+}
+
+dl.zend_form fieldset dl dt, dl.zend_form fieldset dl dd { 
+    min-height: 30px;
+    margin-bottom: 10px; 
+}
+
+dl.zend_form fieldset > dl dt {
+    float: left;
+    clear: left;
+    text-align: right;
+}
+
+dl.zend_form dt label.required { 
+}
+
+dl.zend_form dd ul.errors {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+dl.zend_form dd#footer-element {
+    background: #f3f6f8;
+}
+
+dl.zend_form dd#footer-element fieldset {
+    border: 1px solid #ccc;
+}
+
+dl.zend_form dd#submit-element {
+    float: right;
+    margin: 1em;
+}
+
+.submit {  
+    float:right;  
+}  
+  
+.required:after {
+    content:' *';
+    font-size: 10px;
+    color: #f00;
+    font-weight: bold;
+}  
+
+
+
+/*  
+.optional:before{
+    content:'+ '
+}
+*/
+  

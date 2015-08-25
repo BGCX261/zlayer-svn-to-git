@@ -1,0 +1,54 @@
+<?php
+// Set Title
+$this->headTitle("Sistema")->setSeparator(' - ');
+
+// JS
+$this->headScript()->appendFile($this->baseUrl("themes/dojotabtop/commons/all.js"));
+
+// CSS
+$this->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=Open+Sans');
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/extras/dojo/1.6/dojox/layout/resources/ExpandoPane.css"));
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/extras/dojo/1.6/dojox/widget/Dialog/Dialog.css"));
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojotabtop/commons/all.css"));
+
+// Dojo
+$this->dojo()->prependOnLoad('bootstrap');
+
+?>
+
+<body class="claro">
+
+    <!-- Start Preloader -->
+    <div id="preloader"></div>
+    <!-- End Preloader -->
+
+    <!-- Start Layout -->
+    <div dojoType="dijit.layout.BorderContainer" gutters="true" id="layout" liveSplitters="false">
+
+        <!-- Start Header -->
+        <div dojoType="dijit.layout.ContentPane" region="top" splitter="false" id="header">
+
+            <img id="logo" src="<?= $this->baseUrl('themes/dojotabtop/images/logo.jpg') ?>" height="30"/>
+            
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Menu -->
+        <div dojoType="dojox.layout.ExpandoPane" splitter="true" region="leading" id="menu" class="menu"
+                easeIn="dojo.fx.easing.backInOut" easeOut="dojo.fx.easing.backIn"></div>
+        <!-- End Module Menu -->
+
+        <!-- Start Module Tabs -->
+        <div dojoType="dijit.layout.TabContainer" region="center" tabPosition="bottom" id="tabModule"></div>
+        <!-- End Module Tabs -->
+
+    </div>
+    <!-- End Layout -->
+    
+    <!-- Start Temporary content for request -->
+    <div dojoType="dojox.layout.ContentPane" region="center" id="tabModule<?=$this->request()->getModuleName()?><?=$this->request()->getControllerName()?><?=$this->request()->getActionName()?>content" style="overflow-y: auto"><?= $this->layout()->content ?></div>
+    <!-- End Temporary content for request -->
+
+</body>
+
+

@@ -1,0 +1,39 @@
+default:
+
+#    dojo:
+#        requiremodules:
+#            - zlayer.form.Form
+#            - dojo.data.ItemFileReadStore
+#            - dijit.form.FilteringSelect
+
+#    groups:
+#        - login
+
+    redirect:
+        module: example
+        controller: account
+        action: grid
+#        params:
+#            paramOne: value1
+#            paramTwo: value2
+
+#    layout:
+#        layout: example
+#        contentKey: content
+            
+#     contexts:
+#        - json
+#        - html
+#        - html-json
+    
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

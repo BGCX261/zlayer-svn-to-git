@@ -1,0 +1,42 @@
+#layout
+{
+    width: 100%;
+    height: 100%;
+}
+
+#header
+{
+    border: 0px;
+}
+
+.menu
+{
+    width: 240px;
+}
+
+#contentContainer
+{
+    width: 100%
+}
+
+#layout 
+{
+    /* IE */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#CEDFE9)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#CEDFE9);
+    /* Mozilla */
+    background: -moz-linear-gradient(top, #FFFFFF, #CEDFE9) repeat-X;
+    /* Safari, Google Chrome */
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CEDFE9)) repeat-X;
+}
+
+.actionBorderContainer 
+{
+    /* IE */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F4F4F4, endColorstr=#FFFFFF)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F4F4F4, endColorstr=#FFFFFF);
+    /* Mozilla */
+    background: -moz-linear-gradient(top, #F4F4F4, #FFFFFF) repeat-X;
+    /* Safari, Google Chrome */
+    background: -webkit-gradient(linear, left top, left bottom, from(#F4F4F4), to(#FFFFFF)) repeat-X;
+}

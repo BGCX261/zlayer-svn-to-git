@@ -1,0 +1,30 @@
+{   
+    "description": "Consultas",
+    "menu": [
+        {"name": "Pacientes",
+         "items": [
+                {"name": "Adicionar", "module": "appointment", "controller": "patient", "action": "insert"},
+                {"name": "Listar", "module": "appointment", "controller": "patient", "action": "grid"},
+                ]},
+        {"name": "Médicos",
+         "items": [
+                {"name": "Adicionar", "module": "appointment", "controller": "professional", "action": "insert"},
+                {"name": "Listar", "module": "appointment", "controller": "professional", "action": "grid"},
+                ]},
+        {"name": "Unidades",
+         "items": [
+                {"name": "Adicionar", "module": "appointment", "controller": "unit", "action": "insert"},
+                {"name": "Listar", "module": "appointment", "controller": "unit", "action": "grid"},
+                ]},
+        {"name": "Tratamentos",
+         "items": [
+                {"name": "Adicionar", "module": "appointment", "controller": "treatment", "action": "insert"},
+                {"name": "Listar", "module": "appointment", "controller": "treatment", "action": "grid"},
+                {"name": "Equipamentos", "module": "appointment", "controller": "equipment", "action": "grid"},
+                ]},
+        {"name": "Configurações",
+         "items": [
+                {"name": "Status", "module": "appointment", "controller": "status", "action": "grid"},
+                ]},
+        ]
+}

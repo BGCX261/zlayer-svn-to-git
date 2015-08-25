@@ -1,0 +1,33 @@
+<?php
+$form = new Example_Form_Dojo_AccountInsert();
+
+$form->setAction('/example/account/insert')
+     ->setMethod('POST')
+     ->setAttrib('format', 'html-json')
+     ->setAttrib('dojoType', 'zlayer.form.Form')
+     ->setAttrib('target', 'content');
+
+
+/*
+ $form->setAttribs( array(
+'dojoType'=> 'zlayer.navigation.Form',
+));
+*/
+
+//$form->setAttrib('dojoType', array('zlayer.navigation.Form'));
+
+//$form->populateFromPost();
+
+/*
+ echo $this->customDijit(
+'foo',
+'',
+array(
+'dojoType' => 'dijit.form.ValidationTextBox',
+'label'    => 'Nome',
+'description'   => 'Favor inserir um nome válido'
+)
+);
+*/
+
+echo $form;    

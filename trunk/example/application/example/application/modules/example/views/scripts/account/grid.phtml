@@ -1,0 +1,109 @@
+<?php
+// Set Title
+$this->headTitle("Grid");
+
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/extras/dojo/1.6/dojox/grid/enhanced/resources/claroEnhancedGrid.css"));
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/extras/dojo/1.6/dojox/grid/enhanced/resources/EnhancedGrid_rtl.css"));
+?>
+
+<div url="<?= $this->baseUrl("example/account/list/__format/dojo-data/__items/data/__numRows/rows") ?>" id="serverStore" jsId="serverStore" dojoType="dojox.data.QueryReadStore"></div> 
+
+<div id="mygrid"    
+    style="width: auto; height: 500px;" 
+    dojoType="dojox.grid.EnhancedGrid" 
+    store="serverStore"
+    sortInfo=3
+    structure="
+    	[{
+            field: 'id',
+            name: 'Id',
+            width: '50px'
+        },
+        {
+            field: 'departamentName',
+            name: 'Departament',
+            width: '150px'
+        },
+        {
+            field: 'name',
+            name: 'Name',
+            width: 'auto'
+        }]"
+    plugins="{
+            nestedSorting: true,
+            dnd: false,
+            pagination: {
+                position: 'bottom'
+            },
+            menus: {
+                    headerMenu: 'headerMenu',
+                    rowMenu: 'rowMenu',
+                    cellMenu: 'cellMenu',
+                    selectedRegionMenu: 'selectedRegionMenu'
+            }
+        }
+        "
+    >
+    
+    <!--
+    <div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
+        <div dojoType="dijit.MenuItem">
+            Header Menu Item 1
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Header Menu Item 2
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Header Menu Item 3
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Header Menu Item 4
+        </div>
+    </div>
+    -->
+    <div dojoType="dijit.Menu" id="rowMenu" style="display: none;">
+        <div dojoType="dijit.MenuItem">
+            Row Menu Item 1
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Row Menu Item 2
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Row Menu Item 3
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Row Menu Item 4
+        </div>
+    </div>
+    <!-- 
+    <div dojoType="dijit.Menu" id="cellMenu" style="display: none;">
+        <div dojoType="dijit.MenuItem">
+            Cell Menu Item 1
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Cell Menu Item 2
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Cell Menu Item 3
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Cell Menu Item 4
+        </div>
+    </div>
+    <div dojoType="dijit.Menu" id="selectedRegionMenu" style="display: none;">
+        <div dojoType="dijit.MenuItem">
+            Action 1 for Selected Region
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Action 2 for Selected Region
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Action 3 for Selected Region
+        </div>
+        <div dojoType="dijit.MenuItem">
+            Action 4 for Selected Region
+        </div>
+    </div>
+     -->
+    
+</div>

@@ -1,0 +1,10 @@
+{   
+    "description": "Usuários",
+    "menu": [
+        {"name": "Administração",
+         "items": [
+                {"name": "Listar", "module": "user", "controller": "user", "action": "grid"},
+                {"name": "Cadastrar", "module": "user", "controller": "user", "action": "insert"},
+                ]},
+        ]
+}

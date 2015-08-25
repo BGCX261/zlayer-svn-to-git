@@ -1,0 +1,17 @@
+{   
+    "menu": [
+        {"name": "Módulos",
+         "items": [
+                {"name": "Consultas", "module": "appointment", "controller": "patient", "action": "grid"},
+                ]},
+        {"name": "Sistema",
+         "items": [
+                {"name": "Configurações", "module": "settings", "controller": "settings", "action": "grid"},
+                ]},
+        {"name": "Administração",
+         "items": [
+                {"name": "Usuários", "module": "user", "controller": "user", "action": "grid"},
+                {"name": "Sair", "module": "user", "controller": "auth", "action": "logout"},
+                ]},
+        ]
+}

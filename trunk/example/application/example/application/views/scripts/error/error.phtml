@@ -1,0 +1,36 @@
+<?php
+
+// Set Title
+$this->headTitle("Error");
+
+?>
+
+<div><h1>An Error Occurred</h1></div>
+
+<hr />
+
+<div>
+	<?php  foreach($this->messenger()->errors() as $errorsArray): ?>
+	    <?= $errorsArray[key($errorsArray)] ?><br />
+    <?php endforeach ?>
+</div>
+
+
+<?php if (isset($this->exception)): ?>
+
+	<hr />
+
+	<div><h3>Exception Message:</h3></div>
+    <div><?= $this->exception->getMessage() ?></div>
+    
+	<hr />
+	
+	<div><h3>Trace:</h3></div>
+    <div><pre><?= $this->exception->getTraceAsString() ?></pre></div>
+    
+	<hr />
+	
+	<div><h3>Request Parameters:</h3></div>
+    <div><pre><?= print_r($this->request->getParams(),true) ?></pre></div>
+
+<?php endif ?>

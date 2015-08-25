@@ -1,0 +1,17 @@
+default:
+
+#    dojo:
+#        requiremodules:
+#            - dojox.grid.enhanced.plugins.Pagination
+    
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

@@ -1,0 +1,57 @@
+default:
+
+    filters:
+        id:
+            - Int
+        departamentId:
+            - Int
+        name:
+            - 
+                - Alpha
+                - 
+                    allowWhiteSpace: true
+            - StringToLower
+            - UpperWords
+            - LowerNamePreposition
+
+    validators:
+        id:
+            - NotEmpty
+            - Int
+        departamentId:
+            - NotEmpty
+            - Int
+            -
+                - Db_RecordExists
+                -
+                    table: departament
+                    field: id
+        name:
+            - NotEmpty
+            -
+                - Alpha
+                - 
+                    allowWhiteSpace: true
+            -
+                - StringLength
+                -
+                    - 3
+                    - 128
+            - 
+                - Db_NoRecordExists
+                -
+                    table: account
+                    field: name
+                - insert
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

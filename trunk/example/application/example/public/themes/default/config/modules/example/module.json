@@ -1,0 +1,17 @@
+{   
+    "description": "Exemplo",
+    "menu": [
+        {"name": "Exemplos",
+         "items": [
+                {"name": "Exemplo", "module": "example", "controller": "account", "action": "grid"},
+                ]},
+        {"name": "Sistema",
+         "items": [
+                {"name": "Configurações", "module": "settings", "controller": "settings", "action": "grid"},
+                ]},
+        {"name": "Administração",
+         "items": [
+                {"name": "Usuários", "module": "user", "controller": "user", "action": "grid"},
+                ]},
+        ]
+}

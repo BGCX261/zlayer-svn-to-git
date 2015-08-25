@@ -1,0 +1,28 @@
+<?php
+
+// Set Title
+$this->headTitle("Error");
+
+?>
+
+<div dojoType="dijit.layout.ContentPane"><h1>An Error Occurred</h1></div>
+
+<?php if ($this->messenger()->errors()): ?>
+    <div dojoType="dijit.layout.ContentPane">
+    	<?php  foreach($this->messenger()->errors() as $errorsArray): ?>
+    	    <?= $errorsArray[key($errorsArray)] ?><br />
+        <?php endforeach ?>
+    </div>
+<?php endif ?>
+
+<?php if (isset($this->exception)): ?>
+
+    <div dojoType="dijit.TitlePane" title="Exception Information" open="true"><?= $this->exception->getMessage() ?></div>
+    <div dojoType="dijit.TitlePane" title="Stack trace" open="false">
+        <div style="overflow: auto;">
+            <pre><?= $this->exception->getTraceAsString() ?></pre>
+        </div>
+    </div>
+    <div dojoType="dijit.TitlePane" title="Request Parameters" open="false"><pre><?= print_r($this->params,true) ?></pre></div>
+
+<?php endif ?>

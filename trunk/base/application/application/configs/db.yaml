@@ -1,0 +1,24 @@
+default:
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+
+testing:
+    _extends: default
+
+development:
+    _extends: default
+    resources:
+        db:
+            isDefaultTableAdapter: true
+            adapter: pdo_mysql
+            params:
+                dbname: zlayer
+                host: localhost
+                port: 3306
+                username: root
+                password: root
+                charset: utf8 

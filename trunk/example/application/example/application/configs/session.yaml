@@ -1,0 +1,18 @@
+default:
+    resources:
+        session:
+            save_path: ROOT_PATH/data/sessions/
+            use_only_cookies: false
+            remember_me_seconds: 864000
+                
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

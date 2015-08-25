@@ -1,0 +1,21 @@
+default:
+    resources:
+    
+        dojo:
+            modulepaths:
+                dojotabtop: BASE_URLthemes/dojotabtop/extras/dojo/1.6/dojotabtop
+            requiremodules:
+                - dojotabtop.Main
+                - zlayer.navigation.Href
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

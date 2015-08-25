@@ -1,0 +1,93 @@
+default:
+
+#    id: exampleForm
+
+    elements:
+
+        test:
+            type: hidden
+#            options:
+#                disableLoadDefaultDecorators: true
+
+        departamentId:
+            type: select
+            options:
+                registerInArrayValidator: false
+      
+        name:
+            type: text
+            connect:
+                module: example
+                model: account
+                
+        submit:
+            type: Button
+#            options:
+#                decorators:
+#                    - DijitElement
+#                    - Description
+#                    - Errors
+#                    -
+#                        - 
+#                            data: HtmlTag
+#                        -
+#                            tag: td
+#                            colspan: 2
+#                            align: center
+#                    -
+#                        -
+#                            row: HtmlTag
+#                        -
+#                            tag: tr
+
+#    decorators:
+        
+#        - FormElements
+#        -
+#            -
+#                data: HtmlTag
+#            -
+#                tag: table
+#                cellspacing: 4
+    
+#    elementDecorators:
+
+#        - DijitElement
+#        - Description
+#        - Errors
+#        -
+#            - 
+#                data: HtmlTag
+#            -
+#                tag: td
+#        -
+#            - Label
+#            -
+#                tag: td
+#        -
+#            -
+#                row: HtmlTag
+#            -
+#                tag: tr
+
+    displayGroups:
+    
+        default:
+            elements:
+                - departamentId
+                - name
+        footer:
+            elements:
+                - submit
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

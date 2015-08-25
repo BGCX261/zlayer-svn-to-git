@@ -1,0 +1,22 @@
+default:
+    resources:
+        frontController:
+            params:
+                displayExceptions: false
+
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default
+    resources:
+        frontController:
+            params:
+                displayExceptions: true

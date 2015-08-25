@@ -1,0 +1,71 @@
+default:
+    resources:
+        cachemanager:
+            form:
+                frontend:
+                    name: Core
+                    customFrontendNaming: false
+                    options:
+#                        lifetime: 7200
+                        automatic_serialization: true
+                backend:
+                    name: Apc
+#                    name: File
+#                    customBackendNaming: false
+#                    options:
+#                        cache_dir: ROOT_PATH/data/cache/
+                frontendBackendAutoload: false
+            request:
+                frontend:
+                    name: Core
+                    customFrontendNaming: false
+                    options:
+#                        lifetime: 7200
+                        automatic_serialization: true
+                backend:
+                    name: Apc
+#                    name: File
+#                    customBackendNaming: false
+#                    options:
+#                        cache_dir: ROOT_PATH/data/cache/
+                frontendBackendAutoload: false
+            entity:
+                frontend:
+                    name: Core
+                    customFrontendNaming: false
+                    options:
+#                        lifetime: 7200
+                        automatic_serialization: true
+                backend:
+                    name: Apc
+#                    name: File
+#                    customBackendNaming: false
+#                    options:
+#                        cache_dir: ROOT_PATH/data/cache/
+                frontendBackendAutoload: false
+            theme:
+                frontend:
+                    name: Core
+                    customFrontendNaming: false
+                    options:
+#                        lifetime: 7200
+                        automatic_serialization: true
+                backend:
+                    name: Apc
+#                    name: File
+#                    customBackendNaming: false
+#                    options:
+#                        cache_dir: ROOT_PATH/data/cache/
+                frontendBackendAutoload: false
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

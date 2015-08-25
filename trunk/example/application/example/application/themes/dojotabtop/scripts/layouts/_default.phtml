@@ -1,0 +1,82 @@
+<?php
+// Set Title
+$this->headTitle("My Site Default Layout")->setSeparator(' - ');
+
+// JS
+$this->headScript()->appendFile($this->baseUrl("themes/dojotabtop/js/commons/all.js"));
+
+// CSS
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/dojo/1.6/dojox/layout/resources/ExpandoPane.css"));
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojo/dojo/1.6/dojox/widget/Dialog/Dialog.css"));
+$this->headLink()->appendStylesheet($this->baseUrl("themes/dojotabtop/css/commons/all.css"));
+
+// Dojo
+
+//$this->dojo()->prependOnLoad('dojotabtop.Main.main');
+$this->dojo()->prependOnLoad('bootstrap');
+?>
+
+<body class="claro">
+
+    <!-- Start Preloader -->
+    <div id="preloader"></div>
+    <!-- End Preloader -->
+
+    <!-- Start Layout -->
+    <div dojoType="dijit.layout.BorderContainer" gutters="true" id="layout" liveSplitters="false">
+
+        <!-- Start Header -->
+        <div dojoType="dijit.layout.ContentPane" region="top" splitter="false" id="header">
+
+           <!--
+           <a dojoType="zlayer.navigation.Href" href="<?= $this->baseUrl('index/index') ?>" target="content">_TEST_</a>
+
+           <div dojoType="dojotabtop.widget.Icon" href="/apps/MenuTabletAdmin/public/index/test" target="test"
+                imgSrc='/apps/MenuTabletAdmin/public/themes/dojotabtop/images/icons/example-2-large.png'
+                label='label 2'></div> -->
+
+            <a dojoType="dojotabtop.tab.Module" module="test"><img src="<?= $this->baseUrl('themes/dojotabtop/images/logo.jpg') ?>" width="230" height="30"/></a>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Menu -->
+        <div dojoType="dojox.layout.ExpandoPane" splitter="true" region="leading" id="menu"
+                easeIn="dojo.fx.easing.backInOut" easeOut="dojo.fx.easing.backIn">
+            <div dojoType="dijit.layout.AccordionContainer">
+                <!-- <div dojoType="dojotabtop.Accor"></div> -->
+                <div dojoType="dojox.layout.ContentPane" title="Eventos" style="text-align:center"> 
+                    <a dojoType="dojotabtop.tab.Module" module="event">
+                        <div dojotype="dojotop.widget.Icon" label="Listar eventos" src="<?= $this->baseUrl('themes/webevent/images/icons/icon-event-new.png') ?>"></div>
+                    </a>
+                </div>
+                <div dojoType="dojox.layout.ContentPane" title="CRM"> 
+                    <a dojoType="dojotabtop.tab.Module" module="test">
+                        <div dojotype="dojotop.widget.Icon" src="<?= $this->baseUrl('themes/webevent/images/icons/icon-event-new.png') ?>"></div>
+                    </a>
+                </div>
+                <div dojoType="dojox.layout.ContentPane" title="Administração"> 
+                    <a dojoType="dojotabtop.tab.Module" module="test">
+                        <div dojotype="dojotop.widget.Icon" src="<?= $this->baseUrl('themes/webevent/images/icons/icon-event-new.png') ?>"></div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Module Menu -->
+
+        <!-- Start Module Tabs -->
+        <div dojoType="dijit.layout.TabContainer" region="center" tabPosition="bottom" id="tabModule">
+
+            <!-- Start Home -->
+            <div dojoType="dijit.layout.ContentPane" title="Home" id="home" iconClass="example1TabIcon"><?= $this->layout()->content ?></div>
+            <!-- End Home -->
+
+            <!-- NEW MODULE TAB DISPLAYED HERE -->
+
+        </div>
+        <!-- End Module Tabs -->
+
+    </div>
+    <!-- End Layout -->
+
+</body>

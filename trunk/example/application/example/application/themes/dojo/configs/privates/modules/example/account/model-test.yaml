@@ -1,0 +1,46 @@
+default:
+
+#    groups:
+#        - login
+
+#    redirect:
+#        module: default
+#        controller: index
+#        action: index
+#        params:
+#            paramOne: value1
+#            paramTwo: value2
+
+#    layout:
+#        layout: example
+#        contentKey: content
+            
+#     contexts:
+#        - json
+#        - !html-json
+#        - html
+
+#    dojo:
+#        requiremodules:
+#            - dojox.data.QueryReadStore
+#            - dojo.data.ItemFileReadStore
+#            - dojox.grid.DataGrid
+#            - dojo.store.Memory 
+#            - dojo.data.ObjectStore
+#            - dojox.grid.EnhancedGrid
+#            - dojox.grid.enhanced.plugins.NestedSorting
+#            - dojox.grid.enhanced.plugins.Menu
+#            - dojox.grid.enhanced.plugins.DnD
+#            - dojox.grid.enhanced.plugins.Pagination
+    
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

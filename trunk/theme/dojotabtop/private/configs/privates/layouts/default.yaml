@@ -1,0 +1,36 @@
+default:
+
+    dojo:
+        djConfig:
+            ZlCallBackTarget: callBackTarget 
+        requiremodules: 
+            - dijit.layout.ContentPane
+            - dojox.layout.ContentPane
+            - dijit.layout.BorderContainer
+            - dijit.layout.LayoutContainer
+            - dijit.layout.TabContainer
+            - dijit.layout.ScrollingTabController
+            - dijit.layout.AccordionContainer
+            - dojox.layout.ExpandoPane
+            - dojo.fx.easing
+            - dijit.TitlePane
+            - dojo.fx
+            - dijit.layout.StackContainer
+#        stylesheetmodules:
+#            - dijit.themes.claro.layout.ContentPane
+#            - dijit.themes.claro.layout.ScrollingTabController
+#            - dojox.widget.FisheyeList
+        
+
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

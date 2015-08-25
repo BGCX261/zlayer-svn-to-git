@@ -1,0 +1,18 @@
+{   
+    "description": "Nova conta",
+    "menu": [
+        {"name": "Exemplos",
+         "items": [
+                {"name": "Exemplo", "module": "example", "controller": "account", "action": "grid"},
+                {"name": "Exemplo", "module": "example", "controller": "account", "action": "insert"},
+                ]},
+        {"name": "Sistema",
+         "items": [
+                {"name": "Consultas", "module": "appointment", "controller": "appointment", "action": "grid"},
+                ]},
+        {"name": "Administração",
+         "items": [
+                {"name": "Usuários", "module": "user", "controller": "user", "action": "grid"},
+                ]},
+        ]
+}

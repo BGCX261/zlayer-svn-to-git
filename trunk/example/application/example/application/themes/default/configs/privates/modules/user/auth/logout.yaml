@@ -1,0 +1,22 @@
+default:
+
+    redirect:
+        module: user
+        controller: auth
+        action: login
+        
+    layout:
+        layout: login
+        contentKey: content
+                    
+production:
+    _extends: default
+
+staging:
+    _extends: default
+
+testing:
+    _extends: default
+
+development:
+    _extends: default

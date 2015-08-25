@@ -1,0 +1,39 @@
+default:
+    resources:
+        dojo:
+            djConfig:
+#                useXDomain: true
+#                baseUrl: ./
+                parseOnLoad: true
+                usePlainJson: true
+                locale: pt
+#                destroyRecursive: true
+            cdnVersion: 1.6
+#            cdnBase: http://o.aolcdn.com/dojo/
+#            cdnBase: BASE_URL/extras/dojo/
+#            cdnDojoPath: /dojo/dojo.js
+            registerdojostylesheet: true
+            stylesheetmodules:
+                - zlayer.themes.claro.form
+            modulepaths:
+                dojo: BASE_URLthemes/dojo/extras/dojo/1.6/dojo
+                dojox: BASE_URLthemes/dojo/extras/dojo/1.6/dojox
+                dijit: BASE_URLthemes/dojo/extras/dojo/1.6/dijit
+                util: BASE_URLthemes/dojo/extras/dojo/1.6/util
+                zlayer: BASE_URLthemes/dojo/extras/dojo/1.6/zlayer
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default
+    resources:
+        dojo:
+            cdnBase: BASE_URLthemes/dojo/extras/dojo/
+            cdnDojoPath: /dojo/dojo.js

@@ -1,0 +1,50 @@
+<div dojoType="dijit.layout.BorderContainer" liveSplitters="false" title="<?= ucfirst($this->request()->getActionName()) ?>" id="actionTab-<?= $this->request()->getModuleName() ?>-<?= $this->request()->getControllerName() ?>-<?= $this->request()->getActionName() ?>" closable="true">
+
+            <div dojoType="dijit.layout.ContentPane" region="center" class="layout-module-action-content" id="content">
+                <?= $this->layout()->content ?>
+            </div>
+
+            <div dojoType="dojox.layout.ExpandoPane" region="right"
+                splitter="true" class="actionMenu" easeIn="dojo.fx.easing.backInOut" easeOut="dojo.fx.easing.backIn">
+
+                <div dojoType="dijit.layout.AccordionContainer" minSize="240" splitter="true" title="Module">
+
+                    <div dojoType="dijit.layout.ContentPane" title="Notícias"  selected="true">
+
+                        <div class="iconList">
+                            <div class="iconListImgBox"><img class="iconListImg" src="<?= $this->baseThemeUrl('images/icons/example-1-large.png') ?>"></div>
+                            <div class="iconListInfo">Lorem ipsum</div>
+                        </div>
+
+                        <div class="iconList">
+                            <div class="iconListImgBox"><img class="iconListImg" src="<?= $this->baseThemeUrl('images/icons/example-2-large.png') ?>"></div>
+                            <div class="iconListInfo">Phasellus luctus</div>
+                        </div>
+
+                        <div class="iconList">
+                            <div class="iconListImgBox"><img class="iconListImg" src="<?= $this->baseThemeUrl('images/icons/example-3-large.png') ?>"></div>
+                            <div class="iconListInfo">Curabitur vel</div>
+                        </div>
+
+                        <div class="iconList">
+                            <div class="iconListImgBox"><img class="iconListImg" src="<?= $this->baseThemeUrl('images/icons/example-4-large.png') ?>"></div>
+                            <div class="iconListInfo">Donec tincidunt</div>
+                        </div>
+
+                        <div class="iconList">
+                            <div class="iconListImgBox"><img class="iconListImg" src="<?= $this->baseThemeUrl('images/icons/example-5-large.png') ?>"></div>
+                            <div class="iconListInfo">Class aptent</div>
+                        </div>
+
+                        <div class="iconList">
+                            <div class="iconListImgBox"><img class="iconListImg" src="<?= $this->baseThemeUrl('images/icons/example-6-large.png') ?>"></div>
+                            <div class="iconListInfo">Vestibulum nec</div>
+                        </div>
+
+                    </div>
+                    <div dojoType="dijit.layout.ContentPane" title="Publicidade"></div>
+                </div>
+
+            </div>
+
+        </div>

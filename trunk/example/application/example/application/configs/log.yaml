@@ -1,0 +1,23 @@
+default:
+    resources:
+        log:
+            stream:
+                writerName: Stream
+                writerParams:
+                    stream: ROOT_PATH/data/logs/application.log
+                    mode: a
+                filterName: Priority
+                filterParams:
+                    priority: 10
+                    
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

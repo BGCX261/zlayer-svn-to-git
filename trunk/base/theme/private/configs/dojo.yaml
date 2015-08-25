@@ -1,0 +1,23 @@
+default:
+    resources:
+#        dojo:
+#            modulepaths:
+#              default: BASE_URLthemes/webevent/dojo/1.6/webevent
+#            requiremodules:
+#              - dojox.widget.Wizard
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default
+    resources:
+        dojo:
+            djConfig:
+                isDebug: true

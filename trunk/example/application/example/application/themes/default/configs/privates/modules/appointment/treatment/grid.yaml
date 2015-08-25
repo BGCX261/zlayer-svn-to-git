@@ -1,0 +1,31 @@
+default:
+
+    dojo:
+        requiremodules:
+            - dojox.data.QueryReadStore
+#            - dojo.store.Memory 
+#            - dojo.data.ItemFileWriteStore
+#            - dojo.data.ObjectStore
+            - dojox.grid.DataSelection
+            - dojox.grid.EnhancedGrid
+            - dojox.grid.enhanced.plugins.NestedSorting
+            - dojox.grid.enhanced.plugins.Menu
+#            - dojox.grid.enhanced.plugins.DnD
+            - dojox.grid.enhanced.plugins.Pagination
+            - dojox.grid.enhanced.plugins.IndirectSelection
+            - dojox.grid.cells._base
+            - dojox.grid.cells.dijit
+            - zlayer.navigation.gridMenuItem.Dialog
+#            - dijit.PopupMenuItem
+    
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default

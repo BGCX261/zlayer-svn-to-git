@@ -1,0 +1,23 @@
+default:
+    phpSettings:
+        display_startup_errors: false
+        display_errors: false
+
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default
+    phpSettings:
+        display_startup_errors: true
+        display_errors: true
+        xdebug:
+            remote_log: ROOT_PATH/data/logs/xdebug.log
+            remote_host: 192.168.0.80
+            remote_port: 9000

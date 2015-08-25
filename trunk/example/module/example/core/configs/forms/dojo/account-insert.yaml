@@ -1,0 +1,45 @@
+default:
+
+#    dojoType: zlayer.form.Form
+
+    elements:
+
+        departamentId:
+            type: FilteringSelect
+            options:
+                autocomplete: false
+                storeId: departamentStore
+                jsId: departamentStore
+                storeType: dojo.data.ItemFileReadStore
+                storeParams:
+                    clearOnClose: false
+                    url: BASE_URLexample/departament/list/__format/dojo-data/__identifier/id/__label/name/__items/data
+      
+        name:
+            type: ValidationTextBox
+            options:
+                maxlength: 20
+                trim: true
+#                regExp: ^[a-z0-9]{6,}$
+
+#        name:
+#            type: CustomElementDijit
+#            validator: ValidationTextBox
+#            options:
+#                dojoType: zlayer.form.ExampleCustomValidationTextBox
+#                elementType: text
+                
+        submit:
+            type: SubmitButton
+                
+production:
+    _extends: default
+
+staging:
+    _extends: default
+ 
+testing:
+    _extends: default
+
+development:
+    _extends: default
